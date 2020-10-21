@@ -6,14 +6,20 @@ class NewJSFeatures extends React.Component {
     count: 0,
     greeting: "INCREMENT/DECREMENT"
   };
-  increment = () => {
-    this.setState((prevState) => {
-      return {
-        count: prevState.count + 1
-      };
-    });
-  };
   //you can use this paradigm also
+  // increment = () => {
+  //   this.setState((prevState) => {
+  //     return {
+  //       count: prevState.count + 1
+  //     };
+  //   });
+  // };
+  //or this->
+  increment = () => {
+    //arrow function
+    this.setState((prevState) => ({ count: prevState.count + 1 }));
+  };
+
   // decrement(){
   //     this.setState(prevState=>{
   //         return {
@@ -21,7 +27,7 @@ class NewJSFeatures extends React.Component {
   //         }
   //     })
   // }
-  //or this->
+
   decrement = () => {
     //using arrow function
     this.setState((prevState) => {
